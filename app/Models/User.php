@@ -42,4 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    // Blogモデルとのリレーション
+    public function blogs() {
+        return $this->hasMany(Blog::class);
+    }
 }
